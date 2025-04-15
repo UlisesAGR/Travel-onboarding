@@ -1,6 +1,6 @@
 /*
- * PageMock.kt - local
- * Created by Ulises Gonzalez on 27/02/25
+ * PageMock.kt
+ * Created by Ulises Gonzalez
  * Copyright (c) 2025. All rights reserved
  */
 package com.travelonboarding.mobile.util

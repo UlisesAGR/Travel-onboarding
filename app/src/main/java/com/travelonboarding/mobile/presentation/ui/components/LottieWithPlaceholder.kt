@@ -1,3 +1,8 @@
+/*
+ * LottieWithPlaceholder.kt
+ * Created by Ulises Gonzalez
+ * Copyright (c) 2025. All rights reserved
+ */
 package com.travelonboarding.mobile.presentation.ui.components
 
 import androidx.compose.animation.Crossfade
