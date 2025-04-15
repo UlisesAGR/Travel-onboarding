@@ -7,6 +7,7 @@ package com.travelonboarding.mobile.presentation.viewModel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.google.android.gms.common.util.VisibleForTesting
 import com.travelonboarding.mobile.presentation.ui.provider.PagesProviderImpl
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableSharedFlow
@@ -26,7 +27,8 @@ class TravelOnboardingViewModel @Inject constructor(
         getPages()
     }
 
-    private fun getPages() = viewModelScope.launch {
+    @VisibleForTesting
+    fun getPages() = viewModelScope.launch {
         _travelOnboardingUiState.emit(TravelOnboardingUiState.Loading(isLoading = true))
         val pages = pagesProviderImpl.getPages()
         if (pages.isNotEmpty()) {

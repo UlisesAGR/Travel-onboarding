@@ -6,6 +6,7 @@
 package com.travelonboarding.mobile.domain.model
 
 data class PageModel(
+    val id: Int,
     val animation: Int,
     val title: String,
     val description: String,
