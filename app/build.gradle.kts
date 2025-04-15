@@ -19,8 +19,6 @@ android {
     defaultConfig {
         resValue("string", "APP_NAME", "\"${properties["app.name"]}\"")
 
-        buildConfigField("String", "DATABASE_NAME", "\"${properties["database.name"]}\"")
-
         applicationId = BuildConfig.APP_ID
         minSdk = BuildConfig.MIN_SDK_VERSION
         targetSdk = BuildConfig.TARGET_SDK_VERSION
@@ -92,9 +90,6 @@ dependencies {
     implementation(libs.androidx.constraintlayout)
     implementation(libs.androidx.navigation.fragment.ktx)
     implementation(libs.androidx.navigation.ui.ktx)
-    // Room
-    implementation(libs.bundles.androidx.room.libs)
-    ksp(libs.androidx.room.compiler)
     // Hilt
     ksp(libs.com.google.hilt.compiler)
     // Test

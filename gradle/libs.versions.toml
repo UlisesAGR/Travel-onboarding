@@ -25,9 +25,6 @@ pager = "0.12.0"
 # Hilt
 lib-hilt = "2.56.1"
 lib-hilt-compose = "1.2.0"
-# Room
-lib-room = "2.7.0"
-lib-room-paging = "2.7.0"
 # Test
 junit = "4.13.2"
 junit-version = "1.2.1"
@@ -75,11 +72,6 @@ androidx-ui-text-google-fonts = { group = "androidx.compose.ui", name = "ui-text
 androidx-navigation-compose = { module = "androidx.navigation:navigation-compose", version.ref = "navigation-compose" }
 com-pager = { module = "com.google.accompanist:accompanist-pager", version.ref = "pager" }
 com-lottie-compose = { module = "com.airbnb.android:lottie-compose", version.ref = "lottie-compose" }
-# Room
-androidx-room = { module = "androidx.room:room-ktx", version.ref = "lib-room" }
-androidx-room-compiler = { module = "androidx.room:room-compiler", version.ref = "lib-room" }
-androidx-room-runtime = { module = "androidx.room:room-runtime", version.ref = "lib-room" }
-androidx-room-paging = { module = "androidx.room:room-paging", version.ref = "lib-room-paging" }
 # Hilt
 com-google-hilt = { module = "com.google.dagger:hilt-android", version.ref = "lib-hilt" }
 com-google-hilt-compose = { module = "androidx.hilt:hilt-navigation-compose", version.ref = "lib-hilt-compose" }
@@ -106,11 +98,6 @@ androidx-navigation-ui-ktx = { group = "androidx.navigation", name = "navigation
 org-coroutines-libs = [
     "org-coroutines",
     "org-coroutines-play-service",
-]
-androidx-room-libs = [
-    'androidx-room',
-    'androidx-room-runtime',
-    'androidx-room-paging',
 ]
 com-google-hilt-libs = [
     "com-google-hilt",
