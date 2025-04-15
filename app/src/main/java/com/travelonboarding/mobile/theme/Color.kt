@@ -1,4 +1,4 @@
-package com.travelonboarding.mobile.presentation.ui.theme
+package com.travelonboarding.mobile.theme
 
 import androidx.compose.ui.graphics.Color
 

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+ - dimens.xml
+ - Created by Ulises Gonzalez
+ - Copyright (c) 2025. All rights reserved
+-->
+<resources>
+
+    <!-- Padding -->
+    <dimen name="page.indicator">60dp</dimen>
+    <dimen name="indicator">16dp</dimen>
+    <dimen name="circular.progress">48dp</dimen>
+
+    <!-- Padding -->
+    <dimen name="padding.indicator">2dp</dimen>
+    <dimen name="padding.small">8dp</dimen>
+    <dimen name="padding">16dp</dimen>
+    <dimen name="padding.big">32dp</dimen>
+
+    <!-- Margin -->
+    <dimen name="margin.small">8dp</dimen>
+    <dimen name="margin">16dp</dimen>
+    <dimen name="margin.big">32dp</dimen>
+
+</resources>

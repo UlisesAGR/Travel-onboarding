@@ -9,7 +9,7 @@
 
     <!-- Splash theme -->
     <style name="Theme.TravelOnboarding.Splash" parent="Theme.SplashScreen">
-        <item name="windowSplashScreenBackground">#FFFFFF</item>
+        <item name="windowSplashScreenBackground">@color/ic_launcher_background</item>
         <item name="windowSplashScreenAnimatedIcon">@drawable/il_logo</item>
         <item name="postSplashScreenTheme">@style/Theme.TravelOnboarding</item>
     </style>

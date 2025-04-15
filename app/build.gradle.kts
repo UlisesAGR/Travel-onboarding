@@ -75,12 +75,16 @@ dependencies {
     implementation(platform(libs.androidx.compose.bom))
     implementation(libs.androidx.compose.animation)
     implementation(libs.androidx.compose.foundation)
+    implementation(libs.kotlin.serialization)
     // Libs
     implementation(libs.androidx.material)
     implementation(libs.androidx.splashscreen)
     implementation(libs.androidx.material3)
     implementation(libs.androidx.material.icons.extended)
     implementation(libs.androidx.ui.text.google.fonts)
+    implementation(libs.androidx.navigation.compose)
+    implementation(libs.com.pager)
+    implementation(libs.com.lottie.compose)
     // Hilt
     implementation(libs.bundles.com.google.hilt.libs)
     implementation(libs.material)
