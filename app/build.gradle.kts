@@ -63,6 +63,8 @@ android {
 dependencies {
     // Core
     implementation(libs.androidx.core.ktx)
+    implementation(libs.androidx.appcompat)
+    implementation(libs.androidx.constraintlayout)
     implementation(libs.bundles.androidx.lifecycle.libs)
     implementation(libs.bundles.org.coroutines.libs)
     // Compose
@@ -75,6 +77,7 @@ dependencies {
     implementation(libs.androidx.compose.foundation)
     implementation(libs.kotlin.serialization)
     // Libs
+    implementation(libs.material)
     implementation(libs.androidx.material)
     implementation(libs.androidx.splashscreen)
     implementation(libs.androidx.material3)
@@ -83,15 +86,12 @@ dependencies {
     implementation(libs.androidx.navigation.compose)
     implementation(libs.com.pager)
     implementation(libs.com.lottie.compose)
-    // Hilt
-    implementation(libs.bundles.com.google.hilt.libs)
-    implementation(libs.material)
-    implementation(libs.androidx.appcompat)
-    implementation(libs.androidx.constraintlayout)
+    // Navigation
     implementation(libs.androidx.navigation.fragment.ktx)
     implementation(libs.androidx.navigation.ui.ktx)
     // Hilt
     ksp(libs.com.google.hilt.compiler)
+    implementation(libs.bundles.com.google.hilt.libs)
     // Test
     testImplementation(libs.junit)
     testImplementation(libs.com.google.hilt.testing)

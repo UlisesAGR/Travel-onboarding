@@ -21,7 +21,8 @@
         <activity
             android:name=".presentation.ui.view.activity.TravelOnboardingActivity"
             android:exported="true"
-            android:theme="@style/Theme.TravelOnboarding.Splash">
+            android:theme="@style/Theme.TravelOnboarding.Splash"
+            android:windowSoftInputMode="stateHidden">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

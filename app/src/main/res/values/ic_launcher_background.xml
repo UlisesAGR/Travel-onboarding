@@ -1,4 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?><!--
+ - ic_launcher_background.xml - app
+ - Created by Ulises Gonzalez
+ - Copyright (c) 2025. All rights reserved
+-->
 <resources>
 
     <color name="ic_launcher_background">#FFFFFF</color>
