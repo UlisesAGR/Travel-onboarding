@@ -7,7 +7,6 @@ package com.travelonboarding.mobile.presenter
 
 import com.travelonboarding.mobile.domain.model.PageModel
 import com.travelonboarding.mobile.presentation.ui.provider.PagesProviderImpl
-import com.travelonboarding.mobile.presentation.viewModel.TravelOnboardingUiState
 import com.travelonboarding.mobile.presentation.viewModel.TravelOnboardingViewModel
 import com.travelonboarding.mobile.util.DispatcherRule
 import com.travelonboarding.mobile.util.PageMock.pages
@@ -49,9 +48,7 @@ class TravelOnboardingViewModelTest {
         travelOnboardingViewModel.getPages()
         // Then
         val state = travelOnboardingViewModel.travelOnboardingUiState.first()
-        if (state is TravelOnboardingUiState.GetPages) {
-            assertEquals(expected, state.pages)
-        }
+        assertEquals(expected, state.pages)
     }
 
     @Test
@@ -63,8 +60,6 @@ class TravelOnboardingViewModelTest {
         travelOnboardingViewModel.getPages()
         // Then
         val state = travelOnboardingViewModel.travelOnboardingUiState.first()
-        if (state is TravelOnboardingUiState.GetPages) {
-            assertEquals(expected, state.pages)
-        }
+        assertEquals(expected, state.pages)
     }
 }
