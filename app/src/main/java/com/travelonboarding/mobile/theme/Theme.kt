@@ -268,7 +268,6 @@ fun AppTheme(
 ) {
     val colorScheme = getColorScheme(darkTheme, dynamicColor)
     SetupWindowAppearance(darkTheme)
-
     MaterialTheme(
         colorScheme = colorScheme,
         typography = AppTypography,
