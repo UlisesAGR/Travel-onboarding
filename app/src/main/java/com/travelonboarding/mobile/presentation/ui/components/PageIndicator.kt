@@ -18,10 +18,8 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.travelonboarding.mobile.R
 
 @Composable
 fun PageIndicator(
@@ -44,8 +42,8 @@ fun IndicatorSingleDot(isSelected: Boolean) {
     val width = animateDpAsState(targetValue = if (isSelected) 35.dp else 15.dp, label = "")
     Box(
         modifier = Modifier
-            .padding(dimensionResource(R.dimen.padding_indicator))
-            .height(dimensionResource(R.dimen.indicator))
+            .padding(60.dp)
+            .height(16.dp)
             .width(width.value)
             .clip(CircleShape)
             .background(if (isSelected) MaterialTheme.colorScheme.secondary else MaterialTheme.colorScheme.secondaryContainer),
@@ -58,6 +56,6 @@ private fun PageIndicatorPreview() {
     PageIndicator(
         pageCount = 4,
         currentPage = 1,
-        modifier = Modifier.padding(dimensionResource(R.dimen.page_indicator)),
+        modifier = Modifier.padding(2.dp),
     )
 }

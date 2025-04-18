@@ -5,20 +5,14 @@
 -->
 <resources>
 
-    <!-- Padding -->
-    <dimen name="page.indicator">60dp</dimen>
-    <dimen name="indicator">16dp</dimen>
-    <dimen name="circular.progress">48dp</dimen>
+    <!--Space-->
+    <dimen name="space.small">8dp</dimen>
+    <dimen name="space">12dp</dimen>
+    <dimen name="space.big">16dp</dimen>
 
     <!-- Padding -->
-    <dimen name="padding.indicator">2dp</dimen>
     <dimen name="padding.small">8dp</dimen>
     <dimen name="padding">16dp</dimen>
     <dimen name="padding.big">32dp</dimen>
-
-    <!-- Margin -->
-    <dimen name="margin.small">8dp</dimen>
-    <dimen name="margin">16dp</dimen>
-    <dimen name="margin.big">32dp</dimen>
 
 </resources>
