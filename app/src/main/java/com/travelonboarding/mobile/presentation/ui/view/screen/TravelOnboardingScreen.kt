@@ -85,7 +85,7 @@ fun TravelOnboardingScreen(
         PageIndicator(
             pageCount = pages.size,
             currentPage = pagerState.currentPage,
-            modifier = Modifier.padding(dimensionResource(R.dimen.page_indicator))
+            modifier = Modifier.padding(dimensionResource(R.dimen.page_indicator)),
         )
     }
 }

@@ -48,7 +48,7 @@ fun IndicatorSingleDot(isSelected: Boolean) {
             .height(dimensionResource(R.dimen.indicator))
             .width(width.value)
             .clip(CircleShape)
-            .background(if (isSelected) MaterialTheme.colorScheme.secondary else MaterialTheme.colorScheme.secondaryContainer)
+            .background(if (isSelected) MaterialTheme.colorScheme.secondary else MaterialTheme.colorScheme.secondaryContainer),
     )
 }
 
@@ -58,6 +58,6 @@ private fun PageIndicatorPreview() {
     PageIndicator(
         pageCount = 4,
         currentPage = 1,
-        modifier = Modifier.padding(dimensionResource(R.dimen.page_indicator))
+        modifier = Modifier.padding(dimensionResource(R.dimen.page_indicator)),
     )
 }
