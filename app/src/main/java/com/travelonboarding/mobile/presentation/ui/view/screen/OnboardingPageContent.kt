@@ -45,12 +45,12 @@ fun OnboardingPageContent(
         Text(
             text = page.title,
             textAlign = TextAlign.Center,
-            style = MaterialTheme.typography.headlineLarge,
+            style = MaterialTheme.typography.titleLarge,
         )
         Text(
             text = page.description,
             textAlign = TextAlign.Center,
-            style = MaterialTheme.typography.titleMedium,
+            style = MaterialTheme.typography.labelMedium,
         )
         ButtonPrimary(
             text = stringResource(R.string.immerse_yourself),

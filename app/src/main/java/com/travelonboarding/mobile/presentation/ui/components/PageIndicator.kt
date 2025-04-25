@@ -5,6 +5,8 @@
  */
 package com.travelonboarding.mobile.presentation.ui.components
 
+import androidx.compose.animation.animateColorAsState
+import androidx.compose.animation.animateContentSize
 import androidx.compose.animation.core.animateDpAsState
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -16,10 +18,14 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.travelonboarding.mobile.R
 
 @Composable
 fun PageIndicator(
@@ -28,25 +34,33 @@ fun PageIndicator(
     modifier: Modifier,
 ) {
     Row(
-        horizontalArrangement = Arrangement.SpaceBetween,
+        horizontalArrangement = Arrangement.spacedBy(dimensionResource(R.dimen.padding_small)),
+        verticalAlignment = Alignment.CenterVertically,
         modifier = modifier,
     ) {
-        repeat(pageCount) {
-            IndicatorSingleDot(isSelected = it == currentPage)
+        repeat(pageCount) { index ->
+            IndicatorDot(isSelected = index == currentPage)
         }
     }
 }
 
 @Composable
-fun IndicatorSingleDot(isSelected: Boolean) {
-    val width = animateDpAsState(targetValue = if (isSelected) 35.dp else 15.dp, label = "")
+fun IndicatorDot(isSelected: Boolean) {
+    val dotWidth by animateDpAsState(
+        targetValue = if (isSelected) 32.dp else 16.dp,
+        label = "DotWidth"
+    )
+    val dotColor by animateColorAsState(
+        targetValue = if (isSelected) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.onSurface.copy(alpha = 0.3f),
+        label = "DotColor",
+    )
     Box(
         modifier = Modifier
-            .padding(60.dp)
             .height(16.dp)
-            .width(width.value)
+            .width(dotWidth)
             .clip(CircleShape)
-            .background(if (isSelected) MaterialTheme.colorScheme.secondary else MaterialTheme.colorScheme.secondaryContainer),
+            .background(dotColor)
+            .animateContentSize(),
     )
 }
 
@@ -54,7 +68,7 @@ fun IndicatorSingleDot(isSelected: Boolean) {
 @Composable
 private fun PageIndicatorPreview() {
     PageIndicator(
-        pageCount = 4,
+        pageCount = 5,
         currentPage = 1,
         modifier = Modifier.padding(2.dp),
     )

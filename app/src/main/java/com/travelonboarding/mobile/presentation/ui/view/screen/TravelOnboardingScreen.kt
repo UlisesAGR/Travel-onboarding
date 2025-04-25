@@ -8,6 +8,8 @@ package com.travelonboarding.mobile.presentation.ui.view.screen
 import android.content.Context
 import android.media.MediaPlayer
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.runtime.Composable
@@ -83,10 +85,20 @@ fun TravelOnboardingScreen(
                 }
             )
         }
+        Spacer(
+            modifier = Modifier
+                .fillMaxSize()
+                .weight(1f),
+        )
         PageIndicator(
             pageCount = pages.size,
             currentPage = pagerState.currentPage,
             modifier = Modifier.padding(2.dp),
+        )
+        Spacer(
+            modifier = Modifier
+                .fillMaxSize()
+                .weight(1f),
         )
     }
 }

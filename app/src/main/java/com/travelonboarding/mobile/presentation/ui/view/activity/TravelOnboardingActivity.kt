@@ -10,7 +10,6 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.viewModels
-import androidx.compose.animation.Crossfade
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
@@ -42,17 +41,15 @@ class TravelOnboardingActivity : ComponentActivity() {
         Screen {
             val characterUiEvent = viewModel.travelOnboardingUiState.collectAsState().value
 
-            Crossfade(targetState = characterUiEvent) { event ->
-                Box(
-                    modifier = Modifier
-                        .fillMaxSize()
-                        .padding(horizontal = dimensionResource(id = R.dimen.padding_small)),
-                ) {
-                    TravelOnboardingScreen(
-                        pages = event.pages,
-                        modifier = Modifier.fillMaxSize(),
-                    )
-                }
+            Box(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .padding(horizontal = dimensionResource(id = R.dimen.padding_small)),
+            ) {
+                TravelOnboardingScreen(
+                    pages = characterUiEvent.pages,
+                    modifier = Modifier.fillMaxSize(),
+                )
             }
         }
     }
